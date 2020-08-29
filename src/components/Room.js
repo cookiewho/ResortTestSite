@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import defaultImg from "../images/room-1.jpeg";
 import PropTypes from "prop-types";
+import RoomContainer from "../components/RoomContainer";
 export default function Room({ room }) {
   const { name, slug, images, price } = room;
   return (
@@ -22,11 +23,10 @@ export default function Room({ room }) {
 }
 
 Room.propTypes = {
-  room:PropTypes.shape({
-    name:PropTypes.string.isRequired,
-    slug:PropTypes.string.isRequired,
-    images:PropTypes.arrayOf(PropTypes.string).isRequired,
-    price:PropTypes.number.isRequired
-
-  })
-}
+  room: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    price: PropTypes.number.isRequired,
+  }),
+};
